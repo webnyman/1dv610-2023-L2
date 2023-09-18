@@ -32,4 +32,18 @@ const translateFromRovarsprak = (textToTranslate) => {
   return decodedRovarSprak
 }
 
-export { translateToRovarSprak, translateFromRovarsprak }
+const findSpecialCharactersAndTheirPosition = (text) => {
+  const specialCharactersAndTheirPosition = []
+  text.split('').forEach((char, index) => {
+    if (/[^a-zA-ZÅÄÖåäö]/.test(char)) {
+      specialCharactersAndTheirPosition.push({ char, position: index })
+    }
+  })
+  return specialCharactersAndTheirPosition
+}
+
+const removeSpecialCharacters = (text) => {
+  return text.replace(/[^a-zA-ZÅÄÖåäö]/g, '')
+}
+
+export { translateToRovarSprak, translateFromRovarsprak, findSpecialCharactersAndTheirPosition, removeSpecialCharacters }
