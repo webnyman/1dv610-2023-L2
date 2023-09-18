@@ -1,0 +1,24 @@
+{
+  "name": "l2",
+  "version": "1.0.0",
+  "description": "Translate to and from Rovarsprak",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webnyman/1dv610-2023-L2.git"
+  },
+  "keywords": [
+    "javascript",
+    "translate"
+  ],
+  "author": "Björn Nyman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webnyman/1dv610-2023-L2/issues"
+  },
+  "homepage": "https://github.com/webnyman/1dv610-2023-L2#readme"
+}
