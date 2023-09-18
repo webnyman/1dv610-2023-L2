@@ -54,4 +54,13 @@ const countNumberOfWords = (text) => {
   return text.split(' ').length
 }
 
-export { translateToRovarSprak, translateFromRovarsprak, findSpecialCharactersAndTheirPosition, removeSpecialCharacters, countNumberOfCharacters, countNumberOfWords }
+const countNumberOfVowels = (text) => {
+  return text.match(/[aouåeiyäö]/gi).length
+}
+
+const countNumberOfConsonants = (text) => {
+  return text.match(/[bcdfghjklmnpqrstvwxz]/gi).length
+}
+
+export { translateToRovarSprak, translateFromRovarsprak, findSpecialCharactersAndTheirPosition, removeSpecialCharacters }
+export { countNumberOfCharacters, countNumberOfWords, countNumberOfVowels, countNumberOfConsonants }
