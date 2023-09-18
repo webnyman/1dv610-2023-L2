@@ -50,4 +50,8 @@ const countNumberOfCharacters = (text) => {
   return text.length
 }
 
-export { translateToRovarSprak, translateFromRovarsprak, findSpecialCharactersAndTheirPosition, removeSpecialCharacters, countNumberOfCharacters }
+const countNumberOfWords = (text) => {
+  return text.split(' ').length
+}
+
+export { translateToRovarSprak, translateFromRovarsprak, findSpecialCharactersAndTheirPosition, removeSpecialCharacters, countNumberOfCharacters, countNumberOfWords }
