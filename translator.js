@@ -46,4 +46,8 @@ const removeSpecialCharacters = (text) => {
   return text.replace(/[^a-zA-ZÅÄÖåäö]/g, '')
 }
 
-export { translateToRovarSprak, translateFromRovarsprak, findSpecialCharactersAndTheirPosition, removeSpecialCharacters }
+const countNumberOfCharacters = (text) => {
+  return text.length
+}
+
+export { translateToRovarSprak, translateFromRovarsprak, findSpecialCharactersAndTheirPosition, removeSpecialCharacters, countNumberOfCharacters }
