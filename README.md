@@ -3,7 +3,7 @@
 #Installation
 npm install
 
-#Usage
+##Usage
 import * as rovarSprakLibrary from './translator.js'
 
-#Convertions
+##Convertions
