@@ -102,6 +102,27 @@ const isStringEmpty = (text) => {
   }
 }
 
+const reverseString = (text) => {
+  if (isStringEmpty(text)) {
+    return 'Texten är tom'
+  } else {
+    return text.split('').reverse().join('')
+  }
+}
+
+const encodeToROT13 = (text) => {
+  let encryptedText = ''
+  if (isStringEmpty(text)) {
+    return 'Texten är tom'
+  } else {
+    const alphabet = 'abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ'
+    const rot13Cipher = 'nopqrstuvwxyzåäöabcdefghijklmNOPQRSTUVWXYZÅÄÖABCDEFGHIJKLM'
+    encryptedText = text.replace(/[a-zåäö]/gi, letter => rot13Cipher[alphabet.indexOf(letter)])
+    return encryptedText
+  }
+}
+
 export { translateToRovarSprak, translateFromRovarsprak, isRovarSprak }
 export { countNumberOfCharacters, countNumberOfWords, countNumberOfVowels, countNumberOfConsonants }
-export { validateTextInput, isStringEmpty }
+export { validateTextInput, isStringEmpty, reverseString }
+export { encodeToROT13 }

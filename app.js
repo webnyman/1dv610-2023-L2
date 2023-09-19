@@ -10,4 +10,7 @@ console.log(rovarSprakLibrary.countNumberOfVowels(text))
 console.log(rovarSprakLibrary.countNumberOfConsonants(text))
 console.log(rovarSprakLibrary.translateToRovarSprak(text))
 console.log(rovarSprakLibrary.translateFromRovarsprak(rovarSprak))
+console.log(rovarSprakLibrary.reverseString(text))
+console.log(rovarSprakLibrary.encodeToROT13(text))
+console.log(rovarSprakLibrary.decodeToROT13(rovarSprakLibrary.encodeToROT13(text)))
 // Expected output: Hohoj jo opop dopigog!
