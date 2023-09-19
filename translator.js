@@ -40,7 +40,6 @@ const isRovarSprak = (textToCheck) => {
     if (charsToSkip.includes(textToCheck[i])) {
       isRovarSprak = true
     } else {
-      // Check if text to translate is rövarspråk
       if (textToCheck[i] === textToCheck[(i + 2)] && (textToCheck[(i + 1)]) === 'o') {
         isRovarSprak = true
         i = i + 2
