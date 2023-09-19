@@ -1,9 +1,9 @@
 # 1dv610 L2 Build a Module
 
-#Installation
+## Installation
 npm install
 
-##Usage
+## Usage
 import * as rovarSprakLibrary from './translator.js'
 
-##Convertions
+## Convertions
