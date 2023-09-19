@@ -1,18 +1,13 @@
-import { translateToRovarSprak, isRovarSprak, translateFromRovarsprak, countNumberOfCharacters, countNumberOfWords, countNumberOfConsonants, countNumberOfVowels } from './translator.js'
+import * as rovarSprakLibrary from './translator.js'
 
-const text = ''
+const text = 'Hej på dig, din gamla sill!?!'
 const rovarSprak = 'Hohejoj popå dodigog, dodinon lolilollola fofulolinongog!?!'
-const numberOfCharacters = countNumberOfCharacters(text)
-const numberOfWords = countNumberOfWords(text)
-const numberOfVowels = countNumberOfVowels(text)
-const numberOfConsonants = countNumberOfConsonants(text)
-const isItRovarsprak = isRovarSprak(rovarSprak)
 
-console.log(isItRovarsprak)
-console.log(numberOfCharacters)
-console.log(numberOfWords)
-console.log(numberOfVowels)
-console.log(numberOfConsonants)
-console.log(translateToRovarSprak(text))
-console.log(translateFromRovarsprak(rovarSprak))
+console.log(rovarSprakLibrary.isRovarSprak(rovarSprak))
+console.log(rovarSprakLibrary.countNumberOfCharacters(text))
+console.log(rovarSprakLibrary.countNumberOfWords(text))
+console.log(rovarSprakLibrary.countNumberOfVowels(text))
+console.log(rovarSprakLibrary.countNumberOfConsonants(text))
+console.log(rovarSprakLibrary.translateToRovarSprak(text))
+console.log(rovarSprakLibrary.translateFromRovarsprak(rovarSprak))
 // Expected output: Hohoj jo opop dopigog!

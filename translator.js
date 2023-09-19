@@ -86,7 +86,7 @@ const countNumberOfConsonants = (text) => {
 }
 
 const validateTextInput = (text) => {
-  const validRegEx = /^[A-Za-z0-9\s,.;:åöäÅÖÄ]+$/u
+  const validRegEx = /^[A-Za-z0-9\s,.;:!?åöäÅÖÄ]+$/u
   if (text.match(validRegEx) === null || isStringEmpty(text)) {
     return false
   } else {
