@@ -122,7 +122,19 @@ const encodeToROT13 = (text) => {
   }
 }
 
+const decodeFromROT13 = (text) => {
+  let decryptedText = ''
+  if (isStringEmpty(text)) {
+    return 'Texten är tom'
+  } else {
+    const alphabet = 'abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ'
+    const rot13Cipher = 'nopqrstuvwxyzåäöabcdefghijklmNOPQRSTUVWXYZÅÄÖABCDEFGHIJKLM'
+    decryptedText = text.replace(/[a-zåäö]/gi, letter => alphabet[rot13Cipher.indexOf(letter)])
+    return decryptedText
+  }
+}
+
 export { translateToRovarSprak, translateFromRovarsprak, isRovarSprak }
 export { countNumberOfCharacters, countNumberOfWords, countNumberOfVowels, countNumberOfConsonants }
 export { validateTextInput, isStringEmpty, reverseString }
-export { encodeToROT13 }
+export { encodeToROT13, decodeFromROT13 }
