@@ -2,14 +2,18 @@ const charsToSkip = ['a', 'o', 'u', 'å', 'e', 'i', 'y', 'ä', 'ö', '.', ',', '
 
 const translateToRovarSprak = (textToTranslate) => {
   let rovarSprak = ''
-  for (let i = 0; i < textToTranslate.length; i++) {
-    if (charsToSkip.includes(textToTranslate[i])) {
-      rovarSprak += textToTranslate[i]
-    } else {
-      rovarSprak += textToTranslate[i] + 'o' + textToTranslate[i].toLowerCase()
+  if (validateTextInput(textToTranslate)) {
+    for (let i = 0; i < textToTranslate.length; i++) {
+      if (charsToSkip.includes(textToTranslate[i])) {
+        rovarSprak += textToTranslate[i]
+      } else {
+        rovarSprak += textToTranslate[i] + 'o' + textToTranslate[i].toLowerCase()
+      }
     }
+    return rovarSprak
+  } else {
+    return 'Texten är tom eller innehåller ogiltiga tecken'
   }
-  return rovarSprak
 }
 
 const translateFromRovarsprak = (textToTranslate = 'hohejoj') => {
@@ -50,20 +54,54 @@ const isRovarSprak = (textToCheck) => {
 }
 
 const countNumberOfCharacters = (text) => {
-  return text.length
+  if (isStringEmpty(text)) {
+    return 'Texten är tom'
+  } else {
+    return text.length
+  }
 }
 
 const countNumberOfWords = (text) => {
-  return text.split(' ').length
+  if (isStringEmpty(text)) {
+    return 'Texten är tom'
+  } else {
+    return text.split(' ').length
+  }
 }
 
 const countNumberOfVowels = (text) => {
-  return text.match(/[aouåeiyäö]/gi).length
+  if (isStringEmpty(text)) {
+    return 'Texten är tom'
+  } else {
+    return text.match(/[aouåeiyäö]/gi).length
+  }
 }
 
 const countNumberOfConsonants = (text) => {
-  return text.match(/[bcdfghjklmnpqrstvwxz]/gi).length
+  if (isStringEmpty(text)) {
+    return 'Texten är tom'
+  } else {
+    return text.match(/[bcdfghjklmnpqrstvwxz]/gi).length
+  }
+}
+
+const validateTextInput = (text) => {
+  const validRegEx = /^[A-Za-z0-9\s,.;:åöäÅÖÄ]+$/u
+  if (text.match(validRegEx) === null || isStringEmpty(text)) {
+    return false
+  } else {
+    return true
+  }
+}
+
+const isStringEmpty = (text) => {
+  if (text === '') {
+    return true
+  } else {
+    return false
+  }
 }
 
 export { translateToRovarSprak, translateFromRovarsprak, isRovarSprak }
 export { countNumberOfCharacters, countNumberOfWords, countNumberOfVowels, countNumberOfConsonants }
+export { validateTextInput, isStringEmpty }

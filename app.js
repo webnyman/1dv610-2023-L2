@@ -1,6 +1,6 @@
 import { translateToRovarSprak, isRovarSprak, translateFromRovarsprak, countNumberOfCharacters, countNumberOfWords, countNumberOfConsonants, countNumberOfVowels } from './translator.js'
 
-const text = 'Hej på dig, din lilla fuling!?!'
+const text = ''
 const rovarSprak = 'Hohejoj popå dodigog, dodinon lolilollola fofulolinongog!?!'
 const numberOfCharacters = countNumberOfCharacters(text)
 const numberOfWords = countNumberOfWords(text)
