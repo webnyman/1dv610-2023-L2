@@ -1,49 +1,52 @@
-const vowels = ['a', 'o', 'u', 'å', 'e', 'i', 'y', 'ä', 'ö']
+const charsToSkip = ['a', 'o', 'u', 'å', 'e', 'i', 'y', 'ä', 'ö', '.', ',', '!', '?', ' ', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
 
 const translateToRovarSprak = (textToTranslate) => {
   let rovarSprak = ''
-  for (const letter of textToTranslate) {
-    if (vowels.includes(letter)) {
-      rovarSprak += letter
+  for (let i = 0; i < textToTranslate.length; i++) {
+    if (charsToSkip.includes(textToTranslate[i])) {
+      rovarSprak += textToTranslate[i]
     } else {
-      rovarSprak += letter + 'o' + letter.toLowerCase()
+      rovarSprak += textToTranslate[i] + 'o' + textToTranslate[i].toLowerCase()
     }
   }
   return rovarSprak
 }
 
-const translateFromRovarsprak = (textToTranslate) => {
-  const vowels = ['a', 'o', 'u', 'å', 'e', 'i', 'y', 'ä', 'ö']
+const translateFromRovarsprak = (textToTranslate = 'hohejoj') => {
   let decodedRovarSprak = ''
-  for (let i = 0; i < textToTranslate.length; i++) {
-    if (vowels.includes(textToTranslate[i])) {
-      decodedRovarSprak += textToTranslate[i]
-    } else {
-      // Check if text to translate is rövarspråk
-      if (textToTranslate[i] === textToTranslate[(i + 2)] && (textToTranslate[(i + 1)]) === 'o') {
+  if (isRovarSprak(textToTranslate) === false) {
+    decodedRovarSprak = 'Texten är inte på rövarspråk'
+  } else {
+    for (let i = 0; i < textToTranslate.length; i++) {
+      if (charsToSkip.includes(textToTranslate[i])) {
+        decodedRovarSprak += textToTranslate[i]
+      } else {
         decodedRovarSprak += textToTranslate[i]
         i = i + 2
-      } else {
-        decodedRovarSprak = 'Detta är inte rövarspråk!'
-        break
       }
     }
   }
   return decodedRovarSprak
 }
 
-const findSpecialCharactersAndTheirPosition = (text) => {
-  const specialCharactersAndTheirPosition = []
-  text.split('').forEach((char, index) => {
-    if (/[^a-zA-ZÅÄÖåäö]/.test(char)) {
-      specialCharactersAndTheirPosition.push({ char, position: index })
+const isRovarSprak = (textToCheck) => {
+  textToCheck = textToCheck.toLowerCase()
+  let isRovarSprak = true
+  for (let i = 0; i < textToCheck.length; i++) {
+    if (charsToSkip.includes(textToCheck[i])) {
+      isRovarSprak = true
+    } else {
+      // Check if text to translate is rövarspråk
+      if (textToCheck[i] === textToCheck[(i + 2)] && (textToCheck[(i + 1)]) === 'o') {
+        isRovarSprak = true
+        i = i + 2
+      } else {
+        isRovarSprak = false
+        break
+      }
     }
-  })
-  return specialCharactersAndTheirPosition
-}
-
-const removeSpecialCharacters = (text) => {
-  return text.replace(/[^a-zA-ZÅÄÖåäö]/g, '')
+  }
+  return isRovarSprak
 }
 
 const countNumberOfCharacters = (text) => {
@@ -62,5 +65,5 @@ const countNumberOfConsonants = (text) => {
   return text.match(/[bcdfghjklmnpqrstvwxz]/gi).length
 }
 
-export { translateToRovarSprak, translateFromRovarsprak, findSpecialCharactersAndTheirPosition, removeSpecialCharacters }
+export { translateToRovarSprak, translateFromRovarsprak, isRovarSprak }
 export { countNumberOfCharacters, countNumberOfWords, countNumberOfVowels, countNumberOfConsonants }
