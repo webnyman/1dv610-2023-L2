@@ -13,4 +13,5 @@ console.log(rovarSprakLibrary.translateFromRovarsprak(rovarSprak))
 console.log(rovarSprakLibrary.reverseString(text))
 console.log(rovarSprakLibrary.encodeToROT13(text))
 console.log(rovarSprakLibrary.decodeFromROT13(rovarSprakLibrary.encodeToROT13(text)))
+console.log(rovarSprakLibrary.translateToFikonSprak())
 // Expected output: Hohoj jo opop dopigog!

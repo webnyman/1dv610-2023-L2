@@ -133,7 +133,19 @@ const decodeFromROT13 = (text) => {
   }
 }
 
-export { translateToRovarSprak, translateFromRovarsprak, isRovarSprak }
+const translateToFikonSprak = (textToTranslate = 'kaffe') => {
+  if (isStringEmpty(textToTranslate)) {
+    return 'Texten är tom'
+  } else {
+    for (let i = 0; i < textToTranslate.length; i++) {
+      if (charsToSkip.includes(textToTranslate[i])) {
+        return 'fi' + textToTranslate.substring(i + 1) + ' ' + textToTranslate.substring(0, i + 1) + 'kon'
+      }
+    }
+  }
+}
+
+export { translateToRovarSprak, translateFromRovarsprak, isRovarSprak, translateToFikonSprak }
 export { countNumberOfCharacters, countNumberOfWords, countNumberOfVowels, countNumberOfConsonants }
 export { validateTextInput, isStringEmpty, reverseString }
 export { encodeToROT13, decodeFromROT13 }
