@@ -145,7 +145,17 @@ const translateToFikonSprak = (textToTranslate = 'kaffe') => {
   }
 }
 
-export { translateToRovarSprak, translateFromRovarsprak, isRovarSprak, translateToFikonSprak }
+const translateFromFikonSprak = (textToTranslate = 'fiffe kakon') => {
+  let translatedTextArray = []
+  if (isStringEmpty(textToTranslate)) {
+    return 'Texten är tom'
+  } else {
+    translatedTextArray = textToTranslate.split(' ')
+    return translatedTextArray[1].slice(0, 2) + translatedTextArray[0].substring(2)
+  }
+}
+
+export { translateToRovarSprak, translateFromRovarsprak, isRovarSprak, translateToFikonSprak, translateFromFikonSprak }
 export { countNumberOfCharacters, countNumberOfWords, countNumberOfVowels, countNumberOfConsonants }
 export { validateTextInput, isStringEmpty, reverseString }
 export { encodeToROT13, decodeFromROT13 }
