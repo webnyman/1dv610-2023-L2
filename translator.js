@@ -136,6 +136,8 @@ const decodeFromROT13 = (text) => {
 const translateToFikonSprak = (textToTranslate = 'kaffe') => {
   if (isStringEmpty(textToTranslate)) {
     return 'Texten är tom'
+  } else if (countNumberOfVowels(textToTranslate) === 0) {
+    return 'Texten innehåller inga vokaler'
   } else {
     for (let i = 0; i < textToTranslate.length; i++) {
       if (charsToSkip.includes(textToTranslate[i])) {
@@ -155,7 +157,20 @@ const translateFromFikonSprak = (textToTranslate = 'fiffe kakon') => {
   }
 }
 
-export { translateToRovarSprak, translateFromRovarsprak, isRovarSprak, translateToFikonSprak, translateFromFikonSprak }
+const isFikonSprak = (textToCheck) => {
+  textToCheck = textToCheck.toLowerCase()
+  let isFikonSprak = true
+  if (textToCheck.substring(0, 2) === 'fi' && textToCheck.substring(textToCheck.length - 3) === 'kon') {
+    isFikonSprak = true
+  } else if (countNumberOfWords(textToCheck) !== 2) {
+    isFikonSprak = false
+  } else {
+    isFikonSprak = false
+  }
+  return isFikonSprak
+}
+
+export { translateToRovarSprak, translateFromRovarsprak, isRovarSprak, translateToFikonSprak, translateFromFikonSprak, isFikonSprak }
 export { countNumberOfCharacters, countNumberOfWords, countNumberOfVowels, countNumberOfConsonants }
 export { validateTextInput, isStringEmpty, reverseString }
 export { encodeToROT13, decodeFromROT13 }

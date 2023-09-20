@@ -15,4 +15,5 @@ console.log(rovarSprakLibrary.encodeToROT13(text))
 console.log(rovarSprakLibrary.decodeFromROT13(rovarSprakLibrary.encodeToROT13(text)))
 console.log(rovarSprakLibrary.translateToFikonSprak())
 console.log(rovarSprakLibrary.translateFromFikonSprak())
+console.log(rovarSprakLibrary.isFikonSprak('fiffe kakon'))
 // Expected output: Hohoj jo opop dopigog!
