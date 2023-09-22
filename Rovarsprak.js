@@ -22,6 +22,23 @@ class RovarSprak {
     }
   }
 
+  translateFromRovarsprak (textToTranslate = 'hohejoj') {
+    let decodedRovarSprak = ''
+    if (this.isRovarSprak(textToTranslate) === false) {
+      decodedRovarSprak = 'Texten är inte på rövarspråk'
+    } else {
+      for (let i = 0; i < textToTranslate.length; i++) {
+        if (this.charsToSkip.includes(textToTranslate[i])) {
+          decodedRovarSprak += textToTranslate[i]
+        } else {
+          decodedRovarSprak += textToTranslate[i]
+          i = i + 2
+        }
+      }
+    }
+    return decodedRovarSprak
+  }
+
   validateTextInput (text) {
     const validRegEx = /^[A-Za-z0-9\s,.;:!?åöäÅÖÄ]+$/u
     if (text.match(validRegEx) === null || this.stringFunctions.isStringEmpty(text)) {
@@ -29,6 +46,25 @@ class RovarSprak {
     } else {
       return true
     }
+  }
+
+  isRovarSprak (textToCheck) {
+    textToCheck = textToCheck.toLowerCase()
+    let isRovarSprak = true
+    for (let i = 0; i < textToCheck.length; i++) {
+      if (this.charsToSkip.includes(textToCheck[i])) {
+        isRovarSprak = true
+      } else {
+        if (textToCheck[i] === textToCheck[(i + 2)] && (textToCheck[(i + 1)]) === 'o') {
+          isRovarSprak = true
+          i = i + 2
+        } else {
+          isRovarSprak = false
+          break
+        }
+      }
+    }
+    return isRovarSprak
   }
 }
 

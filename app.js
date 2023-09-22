@@ -3,6 +3,7 @@ import { RovarSprak } from './Rovarsprak.js'
 const rovarSprakLibrary = new RovarSprak()
 const text = 'Hej på dig! Vad heter du?'
 console.log(rovarSprakLibrary.translateToRovarSprak(text))
+console.log(rovarSprakLibrary.translateFromRovarsprak(rovarSprakLibrary.translateToRovarSprak(text)))
 // const rovarSprak = 'Hohejoj popå dodigog, dodinon lolilollola fofulolinongog!?!'
 
 // console.log(rovarSprakLibrary.isRovarSprak(rovarSprak))
