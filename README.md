@@ -4,6 +4,5 @@
 npm install
 
 ## Usage
-import * as rovarSprakLibrary from './translator.js'
 
 ## Convertions
