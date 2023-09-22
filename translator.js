@@ -1,4 +1,7 @@
-const charsToSkip = ['a', 'o', 'u', 'å', 'e', 'i', 'y', 'ä', 'ö', '.', ',', '!', '?', ' ', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+import { charsToSkip, alphabet, rot13Cipher } from './constants.js'
+import { StringFunctions } from './StringFunctions.js'
+
+const stringFunctions = new StringFunctions()
 
 const translateToRovarSprak = (textToTranslate) => {
   let rovarSprak = ''
@@ -52,70 +55,20 @@ const isRovarSprak = (textToCheck) => {
   return isRovarSprak
 }
 
-const countNumberOfCharacters = (text) => {
-  if (isStringEmpty(text)) {
-    return 'Texten är tom'
-  } else {
-    return text.length
-  }
-}
-
-const countNumberOfWords = (text) => {
-  if (isStringEmpty(text)) {
-    return 'Texten är tom'
-  } else {
-    return text.split(' ').length
-  }
-}
-
-const countNumberOfVowels = (text) => {
-  if (isStringEmpty(text)) {
-    return 'Texten är tom'
-  } else {
-    return text.match(/[aouåeiyäö]/gi).length
-  }
-}
-
-const countNumberOfConsonants = (text) => {
-  if (isStringEmpty(text)) {
-    return 'Texten är tom'
-  } else {
-    return text.match(/[bcdfghjklmnpqrstvwxz]/gi).length
-  }
-}
-
 const validateTextInput = (text) => {
   const validRegEx = /^[A-Za-z0-9\s,.;:!?åöäÅÖÄ]+$/u
-  if (text.match(validRegEx) === null || isStringEmpty(text)) {
+  if (text.match(validRegEx) === null || stringFunctions.isStringEmpty(text)) {
     return false
   } else {
     return true
-  }
-}
-
-const isStringEmpty = (text) => {
-  if (text === '') {
-    return true
-  } else {
-    return false
-  }
-}
-
-const reverseString = (text) => {
-  if (isStringEmpty(text)) {
-    return 'Texten är tom'
-  } else {
-    return text.split('').reverse().join('')
   }
 }
 
 const encodeToROT13 = (text) => {
   let encryptedText = ''
-  if (isStringEmpty(text)) {
+  if (stringFunctions.isStringEmpty(text)) {
     return 'Texten är tom'
   } else {
-    const alphabet = 'abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ'
-    const rot13Cipher = 'nopqrstuvwxyzåäöabcdefghijklmNOPQRSTUVWXYZÅÄÖABCDEFGHIJKLM'
     encryptedText = text.replace(/[a-zåäö]/gi, letter => rot13Cipher[alphabet.indexOf(letter)])
     return encryptedText
   }
@@ -123,20 +76,18 @@ const encodeToROT13 = (text) => {
 
 const decodeFromROT13 = (text) => {
   let decryptedText = ''
-  if (isStringEmpty(text)) {
+  if (stringFunctions.isStringEmpty(text)) {
     return 'Texten är tom'
   } else {
-    const alphabet = 'abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ'
-    const rot13Cipher = 'nopqrstuvwxyzåäöabcdefghijklmNOPQRSTUVWXYZÅÄÖABCDEFGHIJKLM'
     decryptedText = text.replace(/[a-zåäö]/gi, letter => alphabet[rot13Cipher.indexOf(letter)])
     return decryptedText
   }
 }
 
 const translateToFikonSprak = (textToTranslate = 'kaffe') => {
-  if (isStringEmpty(textToTranslate)) {
+  if (stringFunctions.isStringEmpty(textToTranslate)) {
     return 'Texten är tom'
-  } else if (countNumberOfVowels(textToTranslate) === 0) {
+  } else if (stringFunctions.countNumberOfVowels(textToTranslate) === 0) {
     return 'Texten innehåller inga vokaler'
   } else {
     for (let i = 0; i < textToTranslate.length; i++) {
@@ -149,7 +100,7 @@ const translateToFikonSprak = (textToTranslate = 'kaffe') => {
 
 const translateFromFikonSprak = (textToTranslate = 'fiffe kakon') => {
   let translatedTextArray = []
-  if (isStringEmpty(textToTranslate)) {
+  if (stringFunctions.isStringEmpty(textToTranslate)) {
     return 'Texten är tom'
   } else {
     translatedTextArray = textToTranslate.split(' ')
@@ -162,7 +113,7 @@ const isFikonSprak = (textToCheck) => {
   let isFikonSprak = true
   if (textToCheck.substring(0, 2) === 'fi' && textToCheck.substring(textToCheck.length - 3) === 'kon') {
     isFikonSprak = true
-  } else if (countNumberOfWords(textToCheck) !== 2) {
+  } else if (stringFunctions.countNumberOfWords(textToCheck) !== 2) {
     isFikonSprak = false
   } else {
     isFikonSprak = false
@@ -171,6 +122,5 @@ const isFikonSprak = (textToCheck) => {
 }
 
 export { translateToRovarSprak, translateFromRovarsprak, isRovarSprak, translateToFikonSprak, translateFromFikonSprak, isFikonSprak }
-export { countNumberOfCharacters, countNumberOfWords, countNumberOfVowels, countNumberOfConsonants }
-export { validateTextInput, isStringEmpty, reverseString }
+export { validateTextInput }
 export { encodeToROT13, decodeFromROT13 }
