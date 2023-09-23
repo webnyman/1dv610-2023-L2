@@ -5,7 +5,7 @@
   "type": "module",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine"
   },
   "repository": {
     "type": "git",
@@ -20,8 +20,5 @@
   "bugs": {
     "url": "https://github.com/webnyman/1dv610-2023-L2/issues"
   },
-  "homepage": "https://github.com/webnyman/1dv610-2023-L2#readme",
-  "devDependencies": {
-    "jest": "^29.7.0"
-  }
+  "homepage": "https://github.com/webnyman/1dv610-2023-L2#readme"
 }

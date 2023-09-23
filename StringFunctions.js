@@ -1,6 +1,6 @@
 class StringFunctions {
   countNumberOfCharacters (text) {
-    return this.text.length
+    return text.length
   }
 
   countNumberOfWords (text) {
