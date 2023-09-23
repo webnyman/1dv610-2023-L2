@@ -124,3 +124,5 @@ const isFikonSprak = (textToCheck) => {
 export { translateToRovarSprak, translateFromRovarsprak, isRovarSprak, translateToFikonSprak, translateFromFikonSprak, isFikonSprak }
 export { validateTextInput }
 export { encodeToROT13, decodeFromROT13 }
+
+// TODO: Add class for FikonSprak

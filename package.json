@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/webnyman/1dv610-2023-L2/issues"
   },
-  "homepage": "https://github.com/webnyman/1dv610-2023-L2#readme"
+  "homepage": "https://github.com/webnyman/1dv610-2023-L2#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }

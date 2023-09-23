@@ -1,7 +1,7 @@
 import { StringFunctions } from './StringFunctions.js'
 
 class Rot13 {
-  constructor() { 
+  constructor () {
     this.alphabet = 'abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ'
     this.rot13Cipher = 'nopqrstuvwxyzåäöabcdefghijklmNOPQRSTUVWXYZÅÄÖABCDEFGHIJKLM'
   }
