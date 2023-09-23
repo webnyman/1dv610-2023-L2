@@ -4,11 +4,12 @@ class Rot13 {
   constructor () {
     this.alphabet = 'abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ'
     this.rot13Cipher = 'nopqrstuvwxyzåäöabcdefghijklmNOPQRSTUVWXYZÅÄÖABCDEFGHIJKLM'
+    this.stringFunctions = new StringFunctions()
   }
 
   encodeToROT13 (text) {
     let encryptedText = ''
-    if (StringFunctions.isStringEmpty(text)) {
+    if (this.stringFunctions.isStringEmpty(text)) {
       return 'Texten är tom'
     } else {
       encryptedText = text.replace(/[a-zåäö]/gi, letter => this.rot13Cipher[this.alphabet.indexOf(letter)])
@@ -18,7 +19,7 @@ class Rot13 {
 
   decodeFromROT13 (text) {
     let decryptedText = ''
-    if (StringFunctions.isStringEmpty(text)) {
+    if (this.stringFunctions.isStringEmpty(text)) {
       return 'Texten är tom'
     } else {
       decryptedText = text.replace(/[a-zåäö]/gi, letter => this.alphabet[this.rot13Cipher.indexOf(letter)])
