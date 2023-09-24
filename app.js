@@ -1,13 +1,19 @@
 import { RovarSprak } from './Rovarsprak.js'
 import { Rot13 } from './Rot13.js'
+import { Fikonsprak } from './Fikonsprak.js'
 
 const rovarSprakLibrary = new RovarSprak()
-const Rot13Library = new Rot13()
+const rot13Library = new Rot13()
+const fikonSprak = new Fikonsprak()
 
-const text = 'Hello World'
+const text = 'Hej på dig!'
+const text2 = 'Kaffe'
+const text3 = 'fiffe kakon'
 console.log(rovarSprakLibrary.translateToRovarSprak(text))
 console.log(rovarSprakLibrary.translateFromRovarsprak(rovarSprakLibrary.translateToRovarSprak(text)))
-console.log(Rot13Library.encodeToROT13(text))
+console.log(rot13Library.encodeToROT13(text))
+console.log(fikonSprak.translateToFikonSprak(text2))
+console.log(fikonSprak.translateFromFikonSprak(text3))
 // const rovarSprak = 'Hohejoj popå dodigog, dodinon lolilollola fofulolinongog!?!'
 
 // console.log(rovarSprakLibrary.isRovarSprak(rovarSprak))
