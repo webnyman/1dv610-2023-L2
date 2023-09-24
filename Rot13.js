@@ -1,9 +1,10 @@
 import { StringFunctions } from './StringFunctions.js'
 
 class Rot13 {
+  #alphabet = 'abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ'
+  #rot13Cipher = 'nopqrstuvwxyzåäöabcdefghijklmNOPQRSTUVWXYZÅÄÖABCDEFGHIJKLM'
+  
   constructor () {
-    this.alphabet = 'abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ'
-    this.rot13Cipher = 'nopqrstuvwxyzåäöabcdefghijklmNOPQRSTUVWXYZÅÄÖABCDEFGHIJKLM'
     this.stringFunctions = new StringFunctions()
   }
 
@@ -12,7 +13,7 @@ class Rot13 {
     if (this.stringFunctions.isStringEmpty(text)) {
       return 'Texten är tom'
     } else {
-      encryptedText = text.replace(/[a-zåäö]/gi, letter => this.rot13Cipher[this.alphabet.indexOf(letter)])
+      encryptedText = text.replace(/[a-zåäö]/gi, letter => this.#rot13Cipher[this.#alphabet.indexOf(letter)])
       return encryptedText
     }
   }
@@ -22,7 +23,7 @@ class Rot13 {
     if (this.stringFunctions.isStringEmpty(text)) {
       return 'Texten är tom'
     } else {
-      decryptedText = text.replace(/[a-zåäö]/gi, letter => this.alphabet[this.rot13Cipher.indexOf(letter)])
+      decryptedText = text.replace(/[a-zåäö]/gi, letter => this.#alphabet[this.#rot13Cipher.indexOf(letter)])
       return decryptedText
     }
   }

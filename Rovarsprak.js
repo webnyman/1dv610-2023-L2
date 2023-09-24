@@ -1,8 +1,9 @@
 import { StringFunctions } from './StringFunctions.js'
 
 class RovarSprak {
+  #charsToSkip = ['a', 'o', 'u', 'å', 'e', 'i', 'y', 'ä', 'ö', '.', ',', '!', '?', ' ', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+
   constructor () {
-    this.charsToSkip = ['a', 'o', 'u', 'å', 'e', 'i', 'y', 'ä', 'ö', '.', ',', '!', '?', ' ', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
     this.stringFunctions = new StringFunctions()
   }
 
@@ -10,7 +11,7 @@ class RovarSprak {
     let rovarSprak = ''
     if (this.validateTextInput(textToTranslate)) {
       for (let i = 0; i < textToTranslate.length; i++) {
-        if (this.charsToSkip.includes(textToTranslate[i])) {
+        if (this.#charsToSkip.includes(textToTranslate[i])) {
           rovarSprak += textToTranslate[i]
         } else {
           rovarSprak += textToTranslate[i] + 'o' + textToTranslate[i].toLowerCase()
@@ -28,7 +29,7 @@ class RovarSprak {
       decodedRovarSprak = 'Texten är inte på rövarspråk'
     } else {
       for (let i = 0; i < textToTranslate.length; i++) {
-        if (this.charsToSkip.includes(textToTranslate[i])) {
+        if (this.#charsToSkip.includes(textToTranslate[i])) {
           decodedRovarSprak += textToTranslate[i]
         } else {
           decodedRovarSprak += textToTranslate[i]
@@ -52,7 +53,7 @@ class RovarSprak {
     textToCheck = textToCheck.toLowerCase()
     let isRovarSprak = true
     for (let i = 0; i < textToCheck.length; i++) {
-      if (this.charsToSkip.includes(textToCheck[i])) {
+      if (this.#charsToSkip.includes(textToCheck[i])) {
         isRovarSprak = true
       } else {
         if (textToCheck[i] === textToCheck[(i + 2)] && (textToCheck[(i + 1)]) === 'o') {
