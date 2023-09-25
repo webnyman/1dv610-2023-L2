@@ -9,10 +9,10 @@
 |Rovarsprak.validateTextInput()|2|[länk till test](spec/support/Rovarsprak.spec.js)|
 |Rot13.encodeToROT13()|2|[länk till test](spec/support/Rot13.spec.js)|
 |Rot13.decodeFromROT13()|2|[länk till test](spec/support/Rot13.spec.js)|
-|StringFunctions.countNumberOfCharacters()|1|(spec/support/StringFunctions.spec.js)|
-|StringFunctions.countNumberOfWords()|1|(spec/support/StringFunctions.spec.js)|
-|StringFunctions.countNumberOfVowels()|1|(spec/support/StringFunctions.spec.js)|
-|StringFunctions.countNumberOfConsonants()|1|(spec/support/StringFunctions.spec.js)|
-|StringFunctions.isStringEmpty()|2|(spec/support/StringFunctions.spec.js)|
-|StringFunctions.isString()|2|(spec/support/StringFunctions.spec.js)|
-|StringFunctions.reverseString()|2|(spec/support/StringFunctions.spec.js)|
+|StringFunctions.countNumberOfCharacters()|1|[länk till test](spec/support/StringFunctions.spec.js)|
+|StringFunctions.countNumberOfWords()|1|[länk till test](spec/support/StringFunctions.spec.js)|
+|StringFunctions.countNumberOfVowels()|1|[länk till test](spec/support/StringFunctions.spec.js)|
+|StringFunctions.countNumberOfConsonants()|1|[länk till test](spec/support/StringFunctions.spec.js)|
+|StringFunctions.isStringEmpty()|2|[länk till test](spec/support/StringFunctions.spec.js)|
+|StringFunctions.isString()|2|[länk till test](spec/support/StringFunctions.spec.js)|
+|StringFunctions.reverseString()|2|[länk till test](spec/support/StringFunctions.spec.js)|
