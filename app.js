@@ -12,5 +12,6 @@ const text3 = 'fiffe kakon'
 console.log(rovarSprakLibrary.translateToRovarSprak(text))
 console.log(rovarSprakLibrary.translateFromRovarsprak(rovarSprakLibrary.translateToRovarSprak(text)))
 console.log(rot13Library.encodeToROT13(text))
+console.log(rot13Library.decodeFromROT13(rot13Library.encodeToROT13(text)))
 console.log(fikonSprakLibrary.translateToFikonSprak(text2))
 console.log(fikonSprakLibrary.translateFromFikonSprak(text3))
