@@ -4,7 +4,12 @@
 |**Rovarsprak** namn på huvudklassen|**Intention-Revealing** <br />Om man inte vet vad rövarspråk är kanske jag borde vara tydligare.|
 |**charsToSkip** namn på privat medlem|**Avoid Mental Mapping** <br />Namnet är hyfsat tydligt. Kanske borde jag skrivit ut **charactersToSkip** istället för att slippa översätta chars till characters.|
 |**stringFunctions** namn på en instans av klassen **StringFunctions**|**Add Meaningful Context** <br /> Namnet borde kanske ändras till **stringUtilities** för att bli tydligare med sitt syfte. stringFunctions kan misstolkas.|
-|**validateTextInput** namn på metod|**Don´t Add Gratouitous Context** <br /> Det räcker med att skriva **validateText**|
-|**validRegEx** namn på variabel|**Make Meaningful Distinctions** <br /> Borde skriva **validRegExPattern** för tydlighets skull|
+|**validateTextInput** namn på metod|**Don´t Add Gratuitous Context** <br /> Det räcker med att skriva **validateText**|
+|**validRegEx** namn på variabel|**Make Meaningful Distinctions** <br /> Borde skriva **validRegExPattern** för tydlighets skull.|
 
+
+# Reflektioner kapitel 3
+|Namn och förklaring|Reflektion och regler från Clean Code kapitel 2|
+|-------------------|-------------------------------------|
+|**translateToRovarSprak** namn på funktion|**Small functions**, **Do one Thing** <br /> Funktionen är relativt liten och fokuserad. Den översätter texten till Rövarspråk och följer principen att göra en sak. Den har dock nestade if/for-loopar. Därför borde jag bryta ur dessa och skapa funktioner som löser detta.<br />**One level of abstraction per function**<br /> Funktionen hanterar en nivå av abstraktion så den hanterar översättning av ord.<br />**Function argument** <br /> Funktionen har bara ett argument.<br />**Prefer Exceptions to Returning Error Codes** <br /> Här finns det definitivt utvecklingspotential. Funktionen returnerar felmeddelanden istället för exceptions. Jag borde lägga till try-catchblock som returnerar exceptions på samtliga funktioner.<br />**DRY** <br /> Jag borde bryta ut vissa if-satser som jag använder flera gånger till egna metoder inom klassen. Detta för att unvika att upprepa kod.|
 
