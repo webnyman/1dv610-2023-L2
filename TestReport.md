@@ -1,4 +1,4 @@
-# Testrapport för modulen
+# Testrapport för modulens metoder
 |Test av metod|Antal test|Testresultat|
 |-------|-----------|------------|
 |Fikonsprak.translateToFikonSprak()|3|[länk till test](spec/support/Fikonsprak.spec.js)|
