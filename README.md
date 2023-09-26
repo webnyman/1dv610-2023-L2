@@ -1,5 +1,5 @@
 # 1dv610 L2 Build a Module - Cypher and deCypher text
-![Node.js](https://img.shields.io/badge/Node.js-v14.17.6-green)
+![Node.js](https://img.shields.io/badge/Node.js-v14.0.0-green)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
 ## Systemkrav
