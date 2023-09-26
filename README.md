@@ -40,9 +40,9 @@ Exekvera filen med kommandot: npm run testapp
 
 `cypher.rovarsprak.from(rovarsprak)` översätter från Rövarspråk. Kan översätta hela meningar.
 
-`cypher.fikonsprak.to(textToCypher)` översätter text till Fikonspråk. **OBS! i nuvarade version endast ett ord i taget.**
+`cypher.fikonsprak.to(textToCypher)` översätter text till Fikonspråk. **OBS! i nuvarande version endast ett ord i taget.**
 
-`cypher.fikonsprak.from(fikonsprak)` översätter från Fikonspråk. **OBS! i nuvarade version endast ett ord i taget.**
+`cypher.fikonsprak.from(fikonsprak)` översätter från Fikonspråk. **OBS! i nuvarande version endast ett ord i taget.**
 
 `cypher.rot13.to(textToCypher)` översätter till Rot13. Kan översätta hela meningar.
 
