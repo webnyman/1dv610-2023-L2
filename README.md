@@ -1,7 +1,7 @@
 # 1dv610 L2 Build a Module - Cypher and deCypher text
 
 ## Systemkrav
-NodeJS > v14.0.0 (Support för ES-mosules)
+NodeJS > v14.0.0 (Support för ES-modules)
 
 ## Installation
 git clone https://github.com/webnyman/1dv610-2023-L2.git
