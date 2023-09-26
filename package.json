@@ -1,7 +1,7 @@
 {
   "name": "l2",
   "version": "1.0.0",
-  "description": "Translate to and from Rovarsprak",
+  "description": "Cypher and decypher a string",
   "type": "module",
   "main": "app.js",
   "scripts": {
