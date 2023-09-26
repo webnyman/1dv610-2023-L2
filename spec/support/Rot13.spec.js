@@ -1,4 +1,4 @@
-import { Rot13 } from '../../Rot13.js'
+import { Rot13 } from '../../src/Rot13.js'
 
 // Tests for the Rot13 class
 describe('Rot13', () => {

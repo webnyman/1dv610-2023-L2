@@ -1,4 +1,4 @@
-import { RovarSprak } from '../../Rovarsprak.js'
+import { RovarSprak } from '../../src/Rovarsprak.js'
 // Tests for the Rovarsprak class
 describe('RovarSprak', () => {
   let rovarSprak

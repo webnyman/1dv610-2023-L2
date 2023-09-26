@@ -18,4 +18,4 @@
 |StringFunctions.reverseString()|2|[länk till test](spec/support/StringFunctions.spec.js)|
 
 ## Resultat från tester i Jasmine
-![Testresultat från Jasmine](./testresult.png "Testresultat")
+![Testresultat från Jasmine](./images/testresult.png "Testresultat")

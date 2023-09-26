@@ -1,4 +1,4 @@
-import { Fikonsprak } from '../../Fikonsprak.js'
+import { Fikonsprak } from '../../src/Fikonsprak.js'
 
 // Tests for the Fikonsprak class
 describe('Fikonsprak', () => {

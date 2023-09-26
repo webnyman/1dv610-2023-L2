@@ -1,4 +1,4 @@
-import { StringFunctions } from '../../StringFunctions.js'
+import { StringFunctions } from '../../src/StringFunctions.js'
 // Tests for the StringFunctions class
 describe('StringFunctions', () => {
   let stringFunctions
