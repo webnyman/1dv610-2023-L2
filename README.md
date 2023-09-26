@@ -2,6 +2,9 @@
 ![Node.js](https://img.shields.io/badge/Node.js-v14.0.0-green)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
+## Version
+1.0.0
+
 ## Systemkrav
 NodeJS > v14.0.0 (Support för ES-modules)
 
