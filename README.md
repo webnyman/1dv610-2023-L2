@@ -27,9 +27,9 @@ Se gärna exempel på användning i filen app.js.
 Exekvera filen med kommandot: npm run testapp
 
 ---
-import { cypher } from './cypher.js'
+`import { cypher } from './cypher.js'`
 
-const textToCypher = 'hello'
+`const textToCypher = 'hello'`
 
 `cypher.rovarsprak.to(textToCypher)` översätter text till Rövarspråk. Kan översätta hela meningar.
 
