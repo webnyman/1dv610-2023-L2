@@ -6,7 +6,7 @@ describe('RovarSprak', () => {
   beforeEach(() => {
     rovarSprak = new RovarSprak()
   })
-  // Test cases (3) for translateToRovarSprak
+  // Test cases (2) for translateToRovarSprak
   it('should translate text to RovarSprak', () => {
     const translatedText = rovarSprak.translateToRovarSprak('Hej på dig')
     expect(translatedText).toBe('Hohejoj popå dodigog')
@@ -26,7 +26,7 @@ describe('RovarSprak', () => {
     expect(decodedText).toBe('Hej på dig')
   })
 
-  // Test cases (2) for validateTextInput
+  // Test cases (1) for validateTextInput
   it('should validate input text correctly', () => {
     const validText = 'Hej på dig'
     const invalidText = 'Hej på dig!###'
@@ -35,7 +35,7 @@ describe('RovarSprak', () => {
     expect(rovarSprak.validateTextInput(invalidText)).toBe(false)
   })
 
-  // Test cases (2) for isRovarSprak
+  // Test case (1) for isRovarSprak
   it('should check if text is in RovarSprak', () => {
     const rovarText = 'Hohejoj popå dodigog'
     const nonRovarText = 'Hej på dig'

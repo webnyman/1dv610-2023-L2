@@ -34,7 +34,7 @@ describe('Fikonsprak', () => {
     expect(noVowelsInput).toBe('Texten innehåller inga vokaler')
   })
 
-  // Test cases (2) for isFikonSprak
+  // Test case (1) for isFikonSprak
   it('should check if text is in Fikonsprak', () => {
     const fikonText = 'fiffe kakon'
     const nonFikonText = 'fiffa kakan'

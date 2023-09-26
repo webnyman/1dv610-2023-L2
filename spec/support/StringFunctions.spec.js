@@ -26,12 +26,12 @@ describe('StringFunctions', () => {
   it('should count the number of consonants in a string', () => {
     expect(stringFunctions.countNumberOfConsonants('Hello')).toBe(3)
   })
-  // Test cases (2) for isStringEmpty
+  // Test cases (1) for isStringEmpty
   it('should return true if the string is empty', () => {
     expect(stringFunctions.isStringEmpty('')).toBe(true)
     expect(stringFunctions.isStringEmpty('Hello')).toBe(false)
   })
-  // Test cases (2) for isString
+  // Test cases (1) for isString
   it('should return true if the input is a string', () => {
     expect(stringFunctions.isString('Hello')).toBe(true)
     expect(stringFunctions.isString(123)).toBe(false)
