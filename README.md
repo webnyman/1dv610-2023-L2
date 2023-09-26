@@ -2,6 +2,7 @@
 
 ## Installation
 git clone https://github.com/webnyman/1dv610-2023-L2.git
+
 npm install
 
 ## Beskrivning
@@ -23,8 +24,8 @@ const fikonsprak = cypher.fikonsprak.to(textToCypher)
 const rot13 = cypher.rot13.to(textToCypher) 
 const rovarsprak = cypher.rovarsprak.to(textToCypher) 
 
-const decodedFikonsprak = cypher.fikonsprak.from(fikonsprak) 
-const decodedRot13 = cypher.rot13.from(rot13) 
+const decodedFikonsprak = cypher.fikonsprak.from(fikonsprak)
+const decodedRot13 = cypher.rot13.from(rot13)
 const decodedRovarsprak = cypher.rovarsprak.from(rovarsprak) 
 
 console.log('Text att koda: ' + textToCypher)
