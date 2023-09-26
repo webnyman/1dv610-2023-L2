@@ -21,7 +21,7 @@ npm test
 [Länk till testfall](/spec/support/)
 
 ## Beskrivning
-Denna modul kodar och avkodar en text till följande kodspråk
+Denna modul kodar och avkodar en text till/från följande kodspråk
 - Rövarspråk
 - Fikonspråk
 - Rot13
