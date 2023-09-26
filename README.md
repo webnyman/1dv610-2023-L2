@@ -5,6 +5,14 @@ git clone https://github.com/webnyman/1dv610-2023-L2.git
 
 npm install
 
+## Testning (Jasmine)
+npm test
+[Länk till testrapport](TestReport.md)
+[Länk till testfall](/spec/support/)
+
+## Reflektioner kring uppgiften
+[Länk till reflektioner](Reflections.md)
+
 ## Beskrivning
 Denna modul kodar och avkodar en text till följande kodspråk
 - Rövarspråk
@@ -38,4 +46,6 @@ console.log('Text avkodad från fikonspråk: ' + decodedRot13)
 console.log('--------------------------')
 console.log('Text på rövarspråk: ' + rovarsprak)
 console.log('Text avkodad från rövarspråk: ' + decodedRovarsprak)
+
+---
 
