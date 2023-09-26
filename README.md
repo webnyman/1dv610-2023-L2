@@ -13,8 +13,8 @@ Denna modul kodar och avkodar en text till följande kodspråk
 ## Exempel på användning
 Se gärna exempel på anvädning i filen app.js.
 Exekvera filen med kommandot: npm run testapp
-
-`import { cypher } from "./cypher.js"
+---
+import { cypher } from "./cypher.js"
 
 const textToCypher = "hello"
 
@@ -36,5 +36,4 @@ console.log('Text avkodad från fikonspråk: ' + decodedRot13)
 console.log('--------------------------')
 console.log('Text på rövarspråk: ' + rovarsprak)
 console.log('Text avkodad från rövarspråk: ' + decodedRovarsprak)
-`
-
+---
