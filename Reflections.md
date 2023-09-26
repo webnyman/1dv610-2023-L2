@@ -1,15 +1,23 @@
 # Reflektioner kapitel 2
-|Namn och förklaring|Reflektion och regler från Clean Code kapitel 2|
+|Namn och förklaring|Reflektion och regler från Clean Code kapitel 2 Namngivning|
 |-------------------|-------------------------------------|
 |**Rovarsprak** namn på huvudklassen|**Intention-Revealing** <br />Om man inte vet vad rövarspråk är kanske jag borde vara tydligare.|
 |**charsToSkip** namn på privat medlem|**Avoid Mental Mapping** <br />Namnet är hyfsat tydligt. Kanske borde jag skrivit ut **charactersToSkip** istället för att slippa "översätta" chars till characters.|
 |**stringFunctions** namn på en instans av klassen **StringFunctions**|**Add Meaningful Context** <br /> Namnet borde kanske ändras till **stringUtilities** för att bli tydligare med sitt syfte. stringFunctions kan misstolkas.|
 |**validateTextInput** namn på metod|**Don´t Add Gratuitous Context** <br /> Det räcker med att skriva **validateText**|
 |**validRegEx** namn på variabel|**Make Meaningful Distinctions** <br /> Borde skriva **validRegExPattern** för tydlighets skull.|
+## Kort reflektion kring kapitel 2
+För mig har det varit mycket utvecklande att utveckla namngivningen av variabler och metoder. Jag har programmerat sedan början på 90-talet och namngivningen av variabler var inget man diskuterade. Enskilda bokstäver med ökande siffror som variabelnamn, function a och function b etc... När man dessutom arbetade in en texteditor utan hjälpmedel var det minst sagt en utmaning att testa och felsöka koden.
+
+Bara att använda "Intention-Revealing Names" underlättar kodläsning och felsökning, men jag hamnar lätt i fällan att "förutsätta" vissa saker istället för att vara tydlig i namngivningen.
+
+Boken tar också upp distinktionen mellan namngivning av klasser och metoder och att få in det "tänket" kan på pappret verka enkelt, men jag märker på mig själv att när jag är inne i kodandet är det lätt att glömma bort detta. 
+
+Normalt sett brukar jag först koda en "lång" funktion och sen bryta ner den i mindre metoder, men efter att ha läst dessa kapitel ska jag försöka tänka mer "objektorienterat" och bygga upp koden med bra namngivna metoder som jag sen kodar upp när strukturen är på plats.
 
 
 # Reflektioner kapitel 3
-|Namn och förklaring|Reflektion och regler från Clean Code kapitel 2|
+|Namn och förklaring|Reflektion och regler från Clean Code kapitel 2 Funktioner|
 |-------------------|-------------------------------------|
 |**translateToRovarSprak** namn på funktion|**Small functions**, **Do one Thing** <br /> Funktionen är relativt liten och fokuserad. Den översätter texten till Rövarspråk och följer principen att göra en sak. Den har dock nestade if/for-loopar. Därför borde jag bryta ur dessa och skapa funktioner som löser detta.<br /><br />**One level of abstraction per function**<br /> Funktionen hanterar en nivå av abstraktion så den hanterar översättning av ord.<br /><br />**Function argument** <br /> Funktionen har bara ett argument.<br /><br />**Prefer Exceptions to Returning Error Codes** <br /> Här finns det definitivt utvecklingspotential. Funktionen returnerar felmeddelanden istället för exceptions. Jag borde lägga till try-catchblock som returnerar exceptions på samtliga funktioner.<br /><br />**DRY** <br /> Jag borde bryta ut vissa if-satser som jag använder flera gånger till egna metoder inom klassen. Detta för att unvika att upprepa kod.<br /><br />**Command Query Separation** <br />Funktionen följer detta då den inte förändrar tillståndet på något utan bara returnerar ett värde.|
 |**translateFromRovarSprak** namn på funktion|**Small functions**, **Do one Thing** <br /> Funktionen är relativt liten och fokuserad. Den översätter texten från Rövarspråk och följer principen att göra en sak. Den har dock nestade if/for-loopar. Därför borde jag bryta ur dessa och skapa funktioner som löser detta.<br /><br />**One level of abstraction per function**<br /> Funktionen hanterar en nivå av abstraktion då den hanterar översättning av ord.<br /><br />**Function argument** <br /> Funktionen har bara ett argument.<br /><br />**Prefer Exceptions to Returning Error Codes** <br /> Här finns det definitivt utvecklingspotential. Funktionen returnerar felmeddelanden istället för exceptions. Jag borde lägga till try-catchblock som returnerar exceptions på samtliga funktioner.<br /><br />**DRY** <br /> Jag borde bryta ut vissa if-satser som jag använder flera gånger till egna metoder inom klassen. Detta för att undvika att upprepa kod.<br /><br />**Command Query Separation** <br />Funktionen följer detta då den inte förändrar tillståndet på något utan bara returnerar ett värde.|
