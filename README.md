@@ -1,5 +1,8 @@
 # 1dv610 L2 Build a Module - Cypher and deCypher text
 
+## Systemkrav
+NodeJS > v14.0.0 (Support för ES-mosules)
+
 ## Installation
 git clone https://github.com/webnyman/1dv610-2023-L2.git
 
@@ -11,9 +14,6 @@ npm test
 [Länk till testrapport](TestReport.md)
 
 [Länk till testfall](/spec/support/)
-
-## Reflektioner kring uppgiften
-[Länk till reflektioner](Reflections.md)
 
 ## Beskrivning
 Denna modul kodar och avkodar en text till följande kodspråk
