@@ -7,7 +7,9 @@ npm install
 
 ## Testning (Jasmine)
 npm test
+
 [Länk till testrapport](TestReport.md)
+
 [Länk till testfall](/spec/support/)
 
 ## Reflektioner kring uppgiften
