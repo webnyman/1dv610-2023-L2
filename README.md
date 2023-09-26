@@ -50,3 +50,6 @@ Exekvera filen med kommandot: npm run testapp
 
 ---
 
+## Issues
+- Metoden fikonsprak kan i nuvarande version endast översätta ett ord i taget.
+- Metoderna fikonsprak och rot13 genererar endast små bokstäver
