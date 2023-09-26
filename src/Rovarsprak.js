@@ -1,6 +1,6 @@
 import { StringFunctions } from './StringFunctions.js'
 
-class RovarSprak {
+class Rovarsprak {
   #charsToSkip = ['a', 'o', 'u', 'å', 'e', 'i', 'y', 'ä', 'ö', '.', ',', '!', '?', ' ', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
 
   constructor () {
@@ -69,4 +69,4 @@ class RovarSprak {
   }
 }
 
-export { RovarSprak }
+export { Rovarsprak }

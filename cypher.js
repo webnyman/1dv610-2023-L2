@@ -1,8 +1,8 @@
 import { Fikonsprak } from './src/Fikonsprak.js'
 import { Rot13 } from './src/Rot13.js'
-import { RovarSprak } from './src/Rovarsprak.js'
+import { Rovarsprak } from './src/Rovarsprak.js'
 
-const rovarSprakLibrary = new RovarSprak()
+const rovarSprakLibrary = new Rovarsprak()
 const rot13Library = new Rot13()
 const fikonSprakLibrary = new Fikonsprak()
 
