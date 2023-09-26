@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Cypher and decypher a string",
   "type": "module",
-  "main": "app.js",
+  "main": "cypher.js",
   "scripts": {
     "test": "jasmine",
     "testapp": "node app.js"

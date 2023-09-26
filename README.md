@@ -23,6 +23,7 @@ Denna modul kodar och avkodar en text till följande kodspråk
 
 ## Exempel på användning
 Se gärna exempel på användning i filen app.js.
+
 Exekvera filen med kommandot: npm run testapp
 
 ---
@@ -30,37 +31,17 @@ import { cypher } from './cypher.js'
 
 const textToCypher = 'hello'
 
-const fikonsprak = cypher.fikonsprak.to(textToCypher)
+`cypher.rovarsprak.to(textToCypher)` översätter text till Rövarspråk. Kan översätta hela meningar.
 
-const rot13 = cypher.rot13.to(textToCypher) 
+`cypher.rovarsprak.from(rovarsprak)` översätter från Rövarspråk. Kan översätta hela meningar.
 
-const rovarsprak = cypher.rovarsprak.to(textToCypher) 
+`cypher.fikonsprak.to(textToCypher)` översätter text till Fikonspråk. OBS! i nuvarade version endast ett ord i taget.
 
-const decodedFikonsprak = cypher.fikonsprak.from(fikonsprak)
+`cypher.fikonsprak.from(fikonsprak)` översätter från Fikonspråk. OBS! i nuvarade version endast ett ord i taget.
 
-const decodedRot13 = cypher.rot13.from(rot13)
+`cypher.rot13.to(textToCypher)` översätter till Rot13. Kan översätta hela meningar.
 
-const decodedRovarsprak = cypher.rovarsprak.from(rovarsprak) 
-
-console.log('Text att koda: ' + textToCypher)
-
-console.log('--------------------------')
-
-console.log('Text på fikonspråk: ' + fikonsprak)
-
-console.log('Text avkodad från fikonspråk: ' + decodedFikonsprak)
-
-console.log('--------------------------')
-
-console.log('Text på Rot13: ' + rot13)
-
-console.log('Text avkodad från fikonspråk: ' + decodedRot13)
-
-console.log('--------------------------')
-
-console.log('Text på rövarspråk: ' + rovarsprak)
-
-console.log('Text avkodad från rövarspråk: ' + decodedRovarsprak)
+`cypher.rot13.from(rot13)` översätter från Rot13. Kan översätta hela meningar.
 
 ---
 
