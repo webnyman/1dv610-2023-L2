@@ -8,7 +8,7 @@ class StringFunctions {
   }
 
   countNumberOfVowels (text) {
-    const numberOfVowels = text.match(/[aouåeiyäö]/gi)
+    const numberOfVowels = text.match(/[aoueiyåäö]/gi)
     if (numberOfVowels === null) {
       return 0
     }

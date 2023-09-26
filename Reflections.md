@@ -30,3 +30,14 @@ Funktioner ska vara korta och endast en sak... Ja, det är lättare sagt än gjo
 Tidigare har jag gärna skapat metoder som jag tror hanterar en sak, men inser när jag läser boken att de metoder jag skapat har dolda beroenden och både förändrar tillstånd och returnerar värden.
 
 Jag måste också utveckla min felhantering med try/catch-block och att kasta undantag. Återigen är Javascript alldeles för förlåtande och under årskurs 1 har vi haft "paket" som löser detta åt oss utan eftertanke.
+
+## Kort reflektion kring min egen kodkvalitet
+Jag behöver träna på att använda en annan grundstruktur innan jag börjar koda. I stället för att börja med att skriva en lång funktion och sen bryta ner det till klasser och moduler måste jag träna på att höja abstraktionsnivån på min kod och tänka mer objektorienterat.
+
+Att använda "meaningful names" är en grundförutsättning för att jag ska lyckas med detta. Jag behöver också jobba med att undvika "Mental Mapping" då jag kommer ifrån en typ av programmering där jag använt förkortningar som jag nu inser att jag inte vet vad dom betyder när jag kommer tillbaka till kod jag inte tittat på på länge. Perspektivet att andra programmerare ska förstå min kod, och viceversa, har varit en ögonöppnare för mig. T.ex. så som vi jobbade under workshop 1.
+
+Att få metoderna att göra bara en sak är också en utmaning för mig. Jag har ibland svårt att se att en if-sats skulle kunna brytas ut till en metod som returnerar true/false och ofta har jag "nästat" in mig i en annan loop som komplicerar det hela ännu mer.
+
+Jag tycker att jag har blivit bättre på att förstå och använda "Command Query Separation" och en aha-upplevelse är att använda is-prefixet när jag bara ska returnera true/false. Ibland kan det vara svårt för mig att förstå om jag både gör någonting och returnerar något, men nu har jag förstått att skillnaden är om tillståndet på ett objekt förändras eller inte.
+
+Som jag tidigare beskrivit har jag inte använt Exceptions speciellt mycket utan istället returnerat egna felkoder/felmeddelanden. På sin höjd har jag lagt in ett try/catch-block kring en funktion, men sen har jag bara slängt ut ett eget felmeddelnade i konsolen. Här har jag stor utvecklingspotential och behöver läsa in mer dokumentation om Exceptions.
