@@ -42,4 +42,4 @@ Jag tycker att jag har blivit bättre på att förstå och använda "Command Que
 
 Som jag tidigare beskrivit har jag inte använt Exceptions speciellt mycket utan istället returnerat egna felkoder/felmeddelanden. På sin höjd har jag lagt in ett try/catch-block kring en funktion, men sen har jag bara slängt ut ett eget felmeddelnade i konsolen. Här har jag stor utvecklingspotential och behöver läsa in mer dokumentation om Exceptions.
 
-Jag har fått många aha-upplevelser under dessa första veckor av denna kurs och känner att jag sakta men säkert förbättrar både min kodkvalitet!
+Jag har fått många aha-upplevelser under dessa första veckor av denna kurs och känner att jag sakta men säkert förbättrar min kodkvalitet!
