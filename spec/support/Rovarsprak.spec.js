@@ -1,10 +1,10 @@
-import { RovarSprak } from '../../src/Rovarsprak.js'
+import { Rovarsprak } from '../../src/Rovarsprak.js'
 // Tests for the Rovarsprak class
 describe('RovarSprak', () => {
   let rovarSprak
 
   beforeEach(() => {
-    rovarSprak = new RovarSprak()
+    rovarSprak = new Rovarsprak()
   })
   // Test cases (2) for translateToRovarSprak
   it('should translate text to RovarSprak', () => {

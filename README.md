@@ -14,7 +14,7 @@ git clone https://github.com/webnyman/1dv610-2023-L2.git
 npm install
 
 ## Testning (Jasmine)
-npm test
+npm run test
 
 [Länk till testrapport](testrapport.md)
 
