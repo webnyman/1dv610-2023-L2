@@ -51,5 +51,5 @@ Exekvera filen med kommandot: npm run testapp
 ---
 
 ## Issues
-- Kalssen Fikonsprak kan i nuvarande version endast översätta ett ord i taget.
-- Kalsserna Fikonsprak och Rot13 genererar endast små bokstäver
+- Klassen Fikonsprak kan i nuvarande version endast översätta ett ord i taget.
+- Klasserna Fikonsprak och Rot13 genererar endast små bokstäver
