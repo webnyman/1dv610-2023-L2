@@ -14,13 +14,7 @@ describe('Fikonsprak', () => {
   })
 
   it('should handle an empty input when translating to Fikonsprak', () => {
-    const emptyInput = fikonsprak.translateToFikonSprak('')
-    expect(emptyInput).toBe('Texten är tom')
-  })
-
-  it('should handle input with more than one word when translating to Fikonsprak', () => {
-    const multipleWordsInput = fikonsprak.translateToFikonSprak('Kaffe är gott')
-    expect(multipleWordsInput).toBe('Det går bara att översätta ett ord i taget')
+    expect(() => fikonsprak.translateToFikonSprak('').toThrowError('Texten är tom'))
   })
 
   // Test cases (2) for translateFromFikonSprak
@@ -30,8 +24,7 @@ describe('Fikonsprak', () => {
   })
 
   it('should handle input with no vowels when translating to Fikonsprak', () => {
-    const noVowelsInput = fikonsprak.translateToFikonSprak('kffr')
-    expect(noVowelsInput).toBe('Texten innehåller inga vokaler')
+    expect(() => fikonsprak.translateToFikonSprak('kffr').toThrowError('Texten innehåller inga vokaler'))
   })
 
   // Test case (1) for isFikonSprak

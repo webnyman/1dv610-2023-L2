@@ -15,8 +15,7 @@ describe('Rot13', () => {
   })
 
   it('should handle an empty string when encoding', () => {
-    const encodedText = rot13.encodeToROT13('')
-    expect(encodedText).toBe('Texten är tom')
+    expect(() => rot13.encodeToROT13('')).toThrowError('Texten är tom')
   })
 
   // Test cases (2) for decodeFromROT13
@@ -26,7 +25,6 @@ describe('Rot13', () => {
   })
 
   it('should handle an empty string when decoding', () => {
-    const decodedText = rot13.decodeFromROT13('')
-    expect(decodedText).toBe('Texten är tom')
+    expect(() => rot13.decodeFromROT13('')).toThrowError('Texten är tom')
   })
 })

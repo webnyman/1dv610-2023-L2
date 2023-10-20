@@ -13,11 +13,8 @@ describe('RovarSprak', () => {
   })
 
   it('should handle an empty or invalid input when translating to RovarSprak', () => {
-    const emptyInput = rovarSprak.translateToRovarSprak('')
-    const invalidInput = rovarSprak.translateToRovarSprak('Hej på dig!#123')
-
-    expect(emptyInput).toBe('Texten är tom eller innehåller ogiltiga tecken')
-    expect(invalidInput).toBe('Texten är tom eller innehåller ogiltiga tecken')
+    expect(() => rovarSprak.translateToRovarSprak('')).toThrowError('Texten är tom')
+    expect(() => rovarSprak.translateToRovarSprak('Hej på dig123#')).toThrowError('Texten är tom eller innehåller ogiltiga tecken')
   })
 
   // Test case (1) for translateFromRovarSprak

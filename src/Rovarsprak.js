@@ -9,7 +9,9 @@ class Rovarsprak {
 
   translateToRovarSprak (textToTranslate) {
     let rovarSprak = ''
-    if (this.validateTextInput(textToTranslate)) {
+    if (this.stringFunctions.isStringEmpty(textToTranslate)) {
+      throw new Error('Texten är tom')
+    } else if (this.validateTextInput(textToTranslate)) {
       for (let i = 0; i < textToTranslate.length; i++) {
         if (this.#charsToSkip.includes(textToTranslate[i])) {
           rovarSprak += textToTranslate[i]
@@ -19,21 +21,25 @@ class Rovarsprak {
       }
       return rovarSprak
     } else {
-      return 'Texten är tom eller innehåller ogiltiga tecken'
+      throw new Error('Texten är tom eller innehåller ogiltiga tecken')
     }
   }
 
-  translateFromRovarsprak (textToTranslate = 'hohejoj') {
+  translateFromRovarsprak (textToTranslate) {
     let decodedRovarSprak = ''
-    if (this.isRovarSprak(textToTranslate) === false) {
-      decodedRovarSprak = 'Texten är inte på rövarspråk'
+    if (this.stringFunctions.isStringEmpty(textToTranslate)) {
+      throw new Error('Texten är tom')
     } else {
-      for (let i = 0; i < textToTranslate.length; i++) {
-        if (this.#charsToSkip.includes(textToTranslate[i])) {
-          decodedRovarSprak += textToTranslate[i]
-        } else {
-          decodedRovarSprak += textToTranslate[i]
-          i = i + 2
+      if (this.isRovarSprak(textToTranslate) === false) {
+        throw new Error('Texten är inte på rövarspråk')
+      } else {
+        for (let i = 0; i < textToTranslate.length; i++) {
+          if (this.#charsToSkip.includes(textToTranslate[i])) {
+            decodedRovarSprak += textToTranslate[i]
+          } else {
+            decodedRovarSprak += textToTranslate[i]
+            i = i + 2
+          }
         }
       }
     }
